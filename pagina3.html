@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="imagens/favIcon2.png">
+    <title>calcular parte 3</title>
+</head>
+<body>
+     <header>
+        <div class="img-item">
+          
+          <div class="separator-bar"></div>
+        </div>
+
+        
+          <i id="clicar-fa" class="fa-solid fa-bars"></i>
+
+   
+
+          <div class="desktop-menu">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="ajuda.html">ajuda</a></li>
+                <li><a href="">sobre</a></li>
+              </ul>
+          </div><!--desktop-menu-->
+
+        
+     </header>
+
+
+            <div class="menu-mobile">
+            
+              <i id="exitBtn" class="fa-solid fa-x"></i>
+
+              <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="ajuda.html">ajuda</a></li>
+                <li><a href="">sobre</a></li>
+              </ul>
+            
+          </div><!--menu-mobile-->
+
+
+     <section class="calculadora-form" >
+      <div class="container">
+        <form action="">
+          <h2>calcule o valor a receber : </h2>
+
+          
+
+
+          <p>digite a quantidade de bucha Grande enviezada da fernanda :</p>
+          <input id="qntbuchaEnvGfer" type="number" placeholder="bucha grande enviesada da fernanda em duzias ..." required>
+
+          <p>digite a quantidade de bucha pequena enviezada da fernanda:</p>
+          <input id="qntbuchaEnvPfer" type="number" placeholder="bucha pequena enviesada da fernanda em duzias ..." required>
+
+          <p>digite a quantidade de bucha variada orvelocada da fernanda :</p>
+          <input id="qntbuchaEnvVfer" type="number" placeholder="bucha variada enviezada da fernanda em duzias ..." required>
+
+
+
+
+          <input id="calcButton2" onclick="calcReceber(event)" type="submit" value="calcular " >
+
+          <div id="imprimir">
+            <p>imprimir </p>
+            <i class="fa-solid fa-print"></i>
+          </div><!--imprimir-->
+
+
+          <div class="proximo">
+            <a href="pagina2.html"><i class="fa-solid fa-arrow-left"></i> anterior</a>
+          </div>
+
+          
+
+
+        </form><!--form-->
+      </div><!--container-->
+     </section>
+
+     <section class="popUp" style="display: none;">
+
+      <div class="pop-alert">
+        <i id="exitBtn-pop" class="fa-solid fa-x"></i>
+        <h2>total :</h2>
+        <h3 id="message"></h3>
+        <h3></h3>
+        
+
+        <a class="send-orcamento" href="">
+          <p>enviar orçamento ! </p>
+             <i id="exitPop" class="fa-brands fa-whatsapp" ></i>
+        </a><!--send-orcamento-->
+
+
+
+      </div><!--pop-alert-->
+        
+      </section>
+
+
+<footer>
+             <div class="contrate">
+          <p>gere o seu proprio sistema</p>
+          <a href="https://wa.me/5531997776546?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." 
+          target="_blank" 
+          class="whatsapp-link">
+          <i class="fa-brands fa-whatsapp"></i>
+         </a>
+        </div>
+      </footer>
+
+     <script src="js/function.js"></script>
+    
+</body>
+</html>
