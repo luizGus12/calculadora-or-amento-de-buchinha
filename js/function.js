@@ -59,20 +59,20 @@ function calcVal(e) {
   // Impede a página de recarregar
   if (e) e.preventDefault();
 
-  const qtdBuchaG = document.getElementById('qntBuchaG').value;
-  const valBuchaG = document.getElementById('valBuchaG').value;
-  const qtdBuchaP = document.getElementById('qntBuchaP').value;
-  const valBuchaP = document.getElementById('valBuchaP').value;
-  const qtdBuchaV = document.getElementById('qntBuchaV').value;
-  const valBuchaV= document.getElementById('valBuchaV').value;
+  const qtdBuchaG = parseFloat(document.getElementById('qntBuchaG').value) || 0;
+  const valBuchaG = parseFloat(document.getElementById('valBuchaG').value) || 0;
+  const qtdBuchaP = parseFloat(document.getElementById('qntBuchaP').value) || 0;
+  const valBuchaP = parseFloat(document.getElementById('valBuchaP').value) || 0;
+  const qtdBuchaV = parseFloat(document.getElementById('qntBuchaV').value) || 0;
+  const valBuchaV = parseFloat(document.getElementById('valBuchaV').value) || 0;
 
 
   const valFinal = (qtdBuchaG * valBuchaG) + (qtdBuchaP * valBuchaP) + (qtdBuchaV * valBuchaV);
 
   
-  const mensagem = `
-quantidade da bucha grande : ${parseFloat(qtdBuchaG)} unidades.
-quantidade da bucha pequena : ${parseFloat(qtdBuchaP)} unidades.
+const mensagem = `
+quantidade da bucha grande : ${parseFloat(qtdBuchaG)} duzias.
+quantidade da bucha pequena : ${parseFloat(qtdBuchaP)} duzias.
 quantidade da variada : ${parseFloat(qtdBuchaV)}
 
 Total: R$ ${valFinal.toFixed(2)}`;
@@ -80,8 +80,8 @@ Total: R$ ${valFinal.toFixed(2)}`;
 const mensagemWapp = `
 total:
 
-quantidade da bucha grande : ${parseFloat(qtdBuchaG)} unidades.
-quantidade da bucha pequena : ${parseFloat(qtdBuchaP)} unidades.
+quantidade da bucha grande : ${parseFloat(qtdBuchaG)} duzias.
+quantidade da bucha pequena : ${parseFloat(qtdBuchaP)} duzias.
 quantidade da variada : ${parseFloat(qtdBuchaV)}
 
 Total: R$ ${valFinal.toFixed(2)}
@@ -92,7 +92,7 @@ luiz Gustavo madeira dos Reis Amaral`;
 
 
 
-document.getElementById('message').innerText = mensagem;
+document.querySelector('.message').innerText = mensagem;
 
 const numero = "5531997776546";
 
