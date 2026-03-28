@@ -14,19 +14,18 @@ function clicarEvent(){
 
     clicar.addEventListener("click" , () =>{
 
-        setTimeout(() =>{
-            menuMobile.style.display = "block";
-        },180);
-        
+        menuMobile.classList.toggle("is-active");
     });
 
-    exitmenu.addEventListener("click" , () =>{
+    /**
+     * exitmenu.addEventListener("click" , () =>{
 
-        setTimeout(() =>{
-            menuMobile.style.display = "none";
-        },180);
+        
+            menuMobile.classList.toggle("is-active");
+        
         
     });
+     */
     
 
 
@@ -71,9 +70,9 @@ function calcVal(e) {
 
   
 const mensagem = `
-quantidade da bucha grande : ${parseFloat(qtdBuchaG)} duzias.
-quantidade da bucha pequena : ${parseFloat(qtdBuchaP)} duzias.
-quantidade da variada : ${parseFloat(qtdBuchaV)}
+quantidade da bucha grande : ${(qtdBuchaG)} duzias.
+quantidade da bucha pequena : ${(qtdBuchaP)} duzias.
+quantidade da variada : ${(qtdBuchaV)}
 
 Total: R$ ${valFinal.toFixed(2)}`;
 

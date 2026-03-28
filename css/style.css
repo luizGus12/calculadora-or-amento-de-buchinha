@@ -7,6 +7,7 @@ html,body{
     width: 100%;
     height: 100%;
     font-style: sans-serif;
+    overflow-x: hidden;
 }
 header{
     width: 100%;
@@ -15,6 +16,7 @@ header{
     justify-content: space-between;
     position: relative;
     border-bottom: 1px solid #333;
+    
 }
 header .img-item{
     width: 160px;
@@ -50,48 +52,50 @@ header i:hover{
     z-index: 999;
     width: 80%;
     background-color: #555;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    top: 0;
-    float: left;
+    height: 100vh;
+    position: absolute;
     display: flex;
+    right: 0;
     flex-direction: column;
-    display: none;
+    transform: translateX(100%); 
+    transition: 0.4s ease;
+    top: 103px;
     
     
     
 }
-.menu-mobile i{
-    float: right;
-    color: white;
-    padding-top: 20px;
-    padding-right: 15px;
-    font-size: 23px;
-    
+.is-active{
+    transform: translateX(0);
+
 }
-.menu-mobile i:hover{
-    color: rgb(0 , 0, 0, 0.2390);
-}
+
+
 .menu-mobile ul{
     margin-top: 90px;
 }
-.menu-mobile li{
+.menu-mobile ul li{
+    display: block;
     list-style-type: none;
     margin-top: 20px;
-    margin-left: 40px;
     cursor: pointer;
+    padding: 10px 40px;
+
+    
 
 
 }
 
-.menu-mobile li a{
+
+.menu-mobile ul li a{
     text-decoration: none;
     color: white;
     font-size: 18px;
+    transition: 0.3s ease;
+    display: inline-block;
 }
-.menu-mobile li a:hover{
-    color: rgb(0 , 0, 0, 0.2390);
+.menu-mobile ul li a:hover{
+    color: #000;
+    transform: translateX(20%);
 }
 .desktop-menu{
     display: none;
@@ -210,6 +214,7 @@ footer{
     display: flex;
     align-items: center ;
     justify-content: space-between;
+    text-decoration: none;
 }
 .contrate p {
     color: white;
@@ -249,11 +254,15 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+.orc p{
+    padding-right: 100px;
+}
 .calculadora-form form h2{
     padding-top: 15px;
 }
 .calculadora-form form p{
     padding-top: 15px;
+    padding-left: 20px;
 }
 
 .calculadora-form form input[type=number]{
@@ -456,8 +465,6 @@ footer{
 
 .about-grid {
     display: grid;
-    /* O repeat(auto-fit) garante que os cards fiquem um do lado do outro no desktop 
-       e um embaixo do outro no celular automaticamente. */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 40px;
@@ -472,13 +479,13 @@ footer{
 }
 
 .about-card:hover {
-    /* Efeito de levitação que você queria */
+    
     transform: translateY(-10px);
 }
 
 .about-card i {
     font-size: 3rem;
-    color: #25d366; /* Verde Fibra Forte/WhatsApp */
+    color: #25d366; 
     margin-bottom: 20px;
 }
 
@@ -495,7 +502,6 @@ footer{
     font-weight: bold;
 }
 
-/* Ajuste de links para redes sociais na página sobre */
 .social-links a {
     color: #333;
     margin: 0 10px;
